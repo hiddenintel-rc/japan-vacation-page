@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!DOCTYPE html<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="robots" content="noindex, nofollow">
@@ -12,243 +12,270 @@
       theme: {
         extend: {
           colors: {
-            primary: '#b71c1c', // deep red
-            accent: '#f5f5f5', // soft white
-            gold: '#d4af37',   // golden accent
-            charcoal: '#1c1c1c' // dark background
+            primary: '#b71c1c',
+            accent: '#f5f5f5',
+            gold: '#d4af37',
+            charcoal: '#1c1c1c'
           },
         },
       },
     }
   </script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   <style>
-    .zoom-container img {
-      transition: transform 0.5s ease;
-      }
-
-    .zoom-container:hover img {
-      transform: scale(1.1);
-    }
-
     body {
       font-family: 'Noto Sans JP', sans-serif;
     }
   </style>
 </head>
-<body class="bg-white text-gray-800 dark:bg-charcoal dark:text-gray-100">
+<body class="bg-gradient-to-br from-accent to-white dark:from-charcoal dark:to-gray-900 text-gray-800 dark:text-gray-100 min-h-screen">
+  <!-- ... (header, cards, etc unchanged) ... -->
   <!-- Dark Mode Toggle -->
   <div class="fixed top-4 right-4 z-50">
-    <button id="darkModeToggle" class="bg-primary text-white px-4 py-2 rounded">Toggle Dark Mode</button>
+    <button id="darkModeToggle" class="bg-primary text-white px-4 py-2 rounded-xl shadow-lg hover:bg-gold hover:text-primary transition-colors duration-300">Toggle Dark Mode</button>
   </div>
 
   <!-- Hero Section -->
-  <header class="bg-primary text-white py-10 shadow-md">
-    <div class="max-w-6xl mx-auto text-center">
-      <h1 class="text-4xl font-bold mb-2">Explore Japan</h1>
-      <p class="text-lg">Discover culture, cuisine, and landmarks from Tokyo to Kyoto</p>
+  <header class="relative bg-gradient-to-r from-primary via-gold to-primary py-16 shadow-xl rounded-b-3xl mb-8 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/symphony.png')] opacity-10 pointer-events-none"></div>
+    <div class="relative max-w-6xl mx-auto text-center">
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg">Explore Japan</h1>
+      <p class="text-xl md:text-2xl text-gold/90 font-medium drop-shadow">Discover culture, cuisine, and landmarks from Tokyo to Kyoto</p>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main class="max-w-6xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <main class="max-w-6xl mx-auto p-4 sm:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-10">
     <!-- Example Location Card -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src="images/Fushimi_inari_shrine_3.jpg" alt="Fushimi Inari Shrine" class="w-full h-full object-cover" />
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src="images/Fushimi_inari_shrine_3.jpg" alt="Fushimi Inari Shrine" class="w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg" />
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Fushimi Inari Shrine</h2>
-        <p class="text-sm mt-2">Located in Kyoto, this Shinto shrine is famous for its thousands of vermilion torii gates and is dedicated to Inari, the deity of rice and prosperity. A spiritual and scenic hike awaits visitors.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Kyoto</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Fushimi Inari Shrine</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">Located in Kyoto, this Shinto shrine is famous for its thousands of vermilion torii gates and is dedicated to Inari, the deity of rice and prosperity. A spiritual and scenic hike awaits visitors.</p>
       </div>
     </div>
   <!-- Ueno Ameyoko Shopping Street -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src="images/Kat-Ueno-Ameyoko.jpg" alt="Ueno Ameyoko Shopping Street" class="w-full h-full object-cover" />
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src="images/Kat-Ueno-Ameyoko.jpg" alt="Ueno Ameyoko Shopping Street" class="w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg" />
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Ueno Ameyoko Shopping Street</h2>
-        <p class="text-sm mt-2">Ameyoko is a bustling open-air market street in Tokyo’s Ueno district. Once a post-WWII black market, it's now a lively strip for food, clothes, and street snacks.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Tokyo</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Ueno Ameyoko Shopping Street</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">Ameyoko is a bustling open-air market street in Tokyo’s Ueno district. Once a post-WWII black market, it's now a lively strip for food, clothes, and street snacks.</p>
       </div>
     </div>
 
     <!-- Ichiran Ramen in Ueno -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src="images/ichiran-ramen-Ueno.jpg" alt="Ichiran Ramen in Ueno" class="w-full h-full object-cover" />
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src="images/ichiran-ramen-Ueno.jpg" alt="Ichiran Ramen in Ueno" class="w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg" />
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Ichiran Ramen in Ueno</h2>
-        <p class="text-sm mt-2">Ichiran offers tonkotsu ramen in solo booths, perfect for immersive, customized flavor experiences in a quirky setting.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Tokyo</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Ichiran Ramen in Ueno</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">Ichiran offers tonkotsu ramen in solo booths, perfect for immersive, customized flavor experiences in a quirky setting.</p>
       </div>
     </div>
 
     <!-- Shibuya Crossing -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src="images/shibuya-crossing.jpg" alt="Shibuya Crossing" class="w-full h-full object-cover" />
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src="images/shibuya-crossing.jpg" alt="Shibuya Crossing" class="w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg" />
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Shibuya Crossing</h2>
-        <p class="text-sm mt-2">Tokyo's iconic scramble crossing surrounded by bright lights, department stores, and a buzzing youth culture vibe.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Tokyo</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Shibuya Crossing</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">Tokyo's iconic scramble crossing surrounded by bright lights, department stores, and a buzzing youth culture vibe.</p>
       </div>
     </div>
 
     <!-- Odaiba Bay -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src="images/odaiba-bay.jpg" alt="Odaiba Bay" class="w-full h-full object-cover" />
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src="images/odaiba-bay.jpg" alt="Odaiba Bay" class="w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg" />
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Odaiba Bay</h2>
-        <p class="text-sm mt-2">A futuristic man-made island district featuring waterfront parks, the Unicorn Gundam statue, and Rainbow Bridge views.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Tokyo</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Odaiba Bay</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">A futuristic man-made island district featuring waterfront parks, the Unicorn Gundam statue, and Rainbow Bridge views.</p>
       </div>
     </div>
 
     <!-- Gundam Base -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src="images/gundam-1.jpg" alt="Gundam Base" class="w-full h-full object-cover" />
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src="images/gundam-1.jpg" alt="Gundam Base" class="w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg" />
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Gundam Base</h2>
-        <p class="text-sm mt-2">DiverCity's ultimate Gundam store and museum in Tokyo, with giant models, Gunpla kits, and a life-size moving Unicorn Gundam.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Tokyo</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Gundam Base</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">DiverCity's ultimate Gundam store and museum in Tokyo, with giant models, Gunpla kits, and a life-size moving Unicorn Gundam.</p>
       </div>
     </div>
-
-    <!-- Osaka Ninja History Museum -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src="images/ninja-history-museum.jpg" alt="Osaka Ninja History Museum" class="w-full h-full object-cover" />
+    
+        <!-- Osaka Ninja History Museum -->
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src="images/ninja-history-museum.jpg" alt="Osaka Ninja History Museum" class="w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg" />
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Osaka Ninja History Museum</h2>
-        <p class="text-sm mt-2">Explore ninja lore through hands-on exhibits, performances, and stealth tools at this immersive Osaka attraction.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Osaka</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Osaka Ninja History Museum</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">Explore ninja lore through hands-on exhibits, performances, and stealth tools at this immersive Osaka attraction.</p>
       </div>
     </div>
 
     <!-- Bullet Train -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src="images/Bullet-train.jpg" alt="Bullet Train" class="w-full h-full object-cover" />
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src="images/Bullet-train.jpg" alt="Bullet Train" class="w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg" />
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Bullet Train (Shinkansen)</h2>
-        <p class="text-sm mt-2">Japan's sleek Shinkansen offers ultra-fast, smooth rides across the country, blending efficiency and elegance in travel.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Japan</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Bullet Train (Shinkansen)</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">Japan's sleek Shinkansen offers ultra-fast, smooth rides across the country, blending efficiency and elegance in travel.</p>
       </div>
     </div>
 
     <!-- Namba Yasaka Shrine -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src="images/namba-yasaka-shrine-Osaka.jpg" alt="Namba Yasaka Shrine" class="w-full h-full object-cover" />
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src="images/namba-yasaka-shrine-Osaka.jpg" alt="Namba Yasaka Shrine" class="w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg" />
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Namba Yasaka Shrine</h2>
-        <p class="text-sm mt-2">Osaka’s shrine with a massive lion-head stage said to swallow evil spirits and bring good luck. A dramatic photo op!</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Osaka</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Namba Yasaka Shrine</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">Osaka’s shrine with a massive lion-head stage said to swallow evil spirits and bring good luck. A dramatic photo op!</p>
       </div>
     </div>
 
     <!-- Tsutenkaku Tower -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src='images/tsutenkaku_tower-Osaka.jpg' alt='Tsutenkaku Tower' class='w-full h-full object-cover'>
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src='images/tsutenkaku_tower-Osaka.jpg' alt='Tsutenkaku Tower' class='w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg'>
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Tsutenkaku Tower</h2>
-        <p class="text-sm mt-2">A retro Osaka landmark with panoramic views, quirky exhibits, and the good-luck deity Billiken.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Osaka</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Tsutenkaku Tower</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">A retro Osaka landmark with panoramic views, quirky exhibits, and the good-luck deity Billiken.</p>
       </div>
     </div>
 
     <!-- Shinsekai District -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src='images/shinsekai_district-2.jpg' alt='Shinsekai District' class='w-full h-full object-cover'>
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src='images/shinsekai_district-2.jpg' alt='Shinsekai District' class='w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg'>
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Shinsekai District</h2>
-        <p class="text-sm mt-2">A nostalgic Osaka neighborhood full of Showa-era charm, street food, and neon vibes.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Osaka</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Shinsekai District</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">A nostalgic Osaka neighborhood full of Showa-era charm, street food, and neon vibes.</p>
       </div>
     </div>
 
     <!-- Golden Pavilion (Kinkaku-ji) -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src='images/Golden_pavilion_kyoto.jpg' alt='Golden Pavilion' class='w-full h-full object-cover'>
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src='images/Golden_pavilion_kyoto.jpg' alt='Golden Pavilion' class='w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg'>
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Golden Pavilion (Kinkaku-ji)</h2>
-        <p class="text-sm mt-2">A Zen temple in Kyoto adorned with gold leaf, reflecting beauty and harmony over a tranquil pond.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Kyoto</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Golden Pavilion (Kinkaku-ji)</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">A Zen temple in Kyoto adorned with gold leaf, reflecting beauty and harmony over a tranquil pond.</p>
       </div>
     </div>
 
     <!-- Nikko Toshogu Shrine -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src='images/Nikko_tosho_gu-Shrine.jpg' alt='Nikko Toshogu Shrine' class='w-full h-full object-cover'>
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src='images/Nikko_tosho_gu-Shrine.jpg' alt='Nikko Toshogu Shrine' class='w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg'>
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Nikko Toshogu Shrine</h2>
-        <p class="text-sm mt-2">An ornate UNESCO World Heritage site and mausoleum of shogun Tokugawa Ieyasu, surrounded by forested beauty.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Nikko</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Nikko Toshogu Shrine</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">An ornate UNESCO World Heritage site and mausoleum of shogun Tokugawa Ieyasu, surrounded by forested beauty.</p>
       </div>
     </div>
 
     <!-- Senso-ji Temple -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src='images/senso_ji_temple_2.jpg' alt='Senso-ji Temple' class='w-full h-full object-cover'>
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src='images/senso_ji_temple_2.jpg' alt='Senso-ji Temple' class='w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg'>
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Senso-ji Temple</h2>
-        <p class="text-sm mt-2">Tokyo’s oldest Buddhist temple with a vibrant shopping street and the iconic Kaminarimon gate.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Tokyo</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Senso-ji Temple</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">Tokyo’s oldest Buddhist temple with a vibrant shopping street and the iconic Kaminarimon gate.</p>
       </div>
     </div>
 
     <!-- Kiyomizu-dera Temple -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src='images/Kiyomizu-dera-kyoto.jpg' alt='Kiyomizu-dera Temple' class='w-full h-full object-cover'>
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src='images/Kiyomizu-dera-kyoto.jpg' alt='Kiyomizu-dera Temple' class='w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg'>
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Kiyomizu-dera Temple</h2>
-        <p class="text-sm mt-2">A Kyoto treasure with a large wooden stage and sacred waterfall, offering seasonal views and spiritual depth.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Kyoto</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Kiyomizu-dera Temple</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">A Kyoto treasure with a large wooden stage and sacred waterfall, offering seasonal views and spiritual depth.</p>
       </div>
     </div>
 
     <!-- Shiodome District -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src='images/shio_dome_3.jpg' alt='Shiodome District' class='w-full h-full object-cover'>
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src='images/shio_dome_3.jpg' alt='Shiodome District' class='w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg'>
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Shiodome District</h2>
-        <p class="text-sm mt-2">A modern urban center in Tokyo with skyscrapers, designer shops, and Miyazaki's giant Ghibli clock.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Tokyo</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Shiodome District</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">A modern urban center in Tokyo with skyscrapers, designer shops, and Miyazaki's giant Ghibli clock.</p>
       </div>
     </div>
 
     <!-- Wagyu Beef Experience -->
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
-        <img src='images/wagyu-beef.jpg' alt='Wagyu Beef' class='w-full h-full object-cover'>
+    <div class="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow-md hover:shadow-2xl transition hover:scale-105 hover:ring-4 hover:ring-primary/30 duration-300 group">
+      <div class="h-52 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl zoom-container">
+        <img src='images/wagyu-beef.jpg' alt='Wagyu Beef' class='w-full h-full object-cover transition group-hover:scale-110 duration-300 rounded-t-2xl shadow-lg'>
       </div>
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-primary dark:text-gold">Wagyu Beef</h2>
-        <p class="text-sm mt-2">Renowned for marbling and tenderness, Wagyu is a luxurious taste of Japan—best served grilled, seared, or as sushi.</p>
+      <div class="p-5">
+        <span class="inline-block bg-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold mb-2 shadow">Japan</span>
+        <h2 class="text-2xl font-extrabold text-primary dark:text-gold tracking-tight mb-1">Wagyu Beef</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-2">Renowned for marbling and tenderness, Wagyu is a luxurious taste of Japan—best served grilled, seared, or as sushi.</p>
       </div>
     </div>
-  </main>
 
+
+  </main>
   <!-- Footer -->
-  <footer class="bg-primary text-white text-center py-6 mt-10">
+  <footer class="bg-primary text-white text-center py-6 mt-10 rounded-t-2xl shadow-xl">
     <p>&copy; 2025 Explore Japan. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Dark Mode -->
-  <script>
-    const toggle = document.getElementById('darkModeToggle');
-    toggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-    });
-  </script>
+  <!-- Image Zoom Modal (fullscreen & zoomable) -->
+  <div id="zoomModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+    <div class="absolute inset-0 flex items-center justify-center">
+      <img id="zoomedImg"
+           src=""
+           alt="Zoomed Image"
+           class="w-full h-full object-contain max-w-full max-h-full"
+           style="touch-action: none;" />
+      <button id="closeModal"
+              class="absolute top-4 right-4 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-3 shadow text-black z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Panzoom library for pinch/scroll zoom support -->
+  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
+  <!-- Your main logic -->
+  <script src="script.js"></script>
 </body>
 </html>
