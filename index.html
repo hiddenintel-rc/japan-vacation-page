@@ -22,6 +22,14 @@
     }
   </script>
   <style>
+    .zoom-container img {
+      transition: transform 0.5s ease;
+      }
+
+    .zoom-container:hover img {
+      transform: scale(1.1);
+    }
+
     body {
       font-family: 'Noto Sans JP', sans-serif;
     }
@@ -45,7 +53,7 @@
   <main class="max-w-6xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <!-- Example Location Card -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src="images/Fushimi_inari_shrine_3.jpg" alt="Fushimi Inari Shrine" class="w-full h-full object-cover" />
       </div>
       <div class="p-4">
@@ -55,7 +63,7 @@
     </div>
   <!-- Ueno Ameyoko Shopping Street -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src="images/Kat-Ueno-Ameyoko.jpg" alt="Ueno Ameyoko Shopping Street" class="w-full h-full object-cover" />
       </div>
       <div class="p-4">
@@ -66,7 +74,7 @@
 
     <!-- Ichiran Ramen in Ueno -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src="images/ichiran-ramen-Ueno.jpg" alt="Ichiran Ramen in Ueno" class="w-full h-full object-cover" />
       </div>
       <div class="p-4">
@@ -77,7 +85,7 @@
 
     <!-- Shibuya Crossing -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src="images/shibuya-crossing.jpg" alt="Shibuya Crossing" class="w-full h-full object-cover" />
       </div>
       <div class="p-4">
@@ -88,7 +96,7 @@
 
     <!-- Odaiba Bay -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src="images/odaiba-bay.jpg" alt="Odaiba Bay" class="w-full h-full object-cover" />
       </div>
       <div class="p-4">
@@ -99,7 +107,7 @@
 
     <!-- Gundam Base -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src="images/gundam-1.jpg" alt="Gundam Base" class="w-full h-full object-cover" />
       </div>
       <div class="p-4">
@@ -110,7 +118,7 @@
 
     <!-- Osaka Ninja History Museum -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src="images/ninja-history-museum.jpg" alt="Osaka Ninja History Museum" class="w-full h-full object-cover" />
       </div>
       <div class="p-4">
@@ -121,7 +129,7 @@
 
     <!-- Bullet Train -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src="images/Bullet-train.jpg" alt="Bullet Train" class="w-full h-full object-cover" />
       </div>
       <div class="p-4">
@@ -132,7 +140,7 @@
 
     <!-- Namba Yasaka Shrine -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src="images/namba-yasaka-shrine-Osaka.jpg" alt="Namba Yasaka Shrine" class="w-full h-full object-cover" />
       </div>
       <div class="p-4">
@@ -143,7 +151,7 @@
 
     <!-- Tsutenkaku Tower -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src='images/tsutenkaku_tower-Osaka.jpg' alt='Tsutenkaku Tower' class='w-full h-full object-cover'>
       </div>
       <div class="p-4">
@@ -154,7 +162,7 @@
 
     <!-- Shinsekai District -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src='images/shinsekai_district-2.jpg' alt='Shinsekai District' class='w-full h-full object-cover'>
       </div>
       <div class="p-4">
@@ -165,7 +173,7 @@
 
     <!-- Golden Pavilion (Kinkaku-ji) -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src='images/Golden_pavilion_kyoto.jpg' alt='Golden Pavilion' class='w-full h-full object-cover'>
       </div>
       <div class="p-4">
@@ -176,7 +184,7 @@
 
     <!-- Nikko Toshogu Shrine -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src='images/Nikko_tosho_gu-Shrine.jpg' alt='Nikko Toshogu Shrine' class='w-full h-full object-cover'>
       </div>
       <div class="p-4">
@@ -187,7 +195,7 @@
 
     <!-- Senso-ji Temple -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src='images/senso_ji_temple_2.jpg' alt='Senso-ji Temple' class='w-full h-full object-cover'>
       </div>
       <div class="p-4">
@@ -198,7 +206,7 @@
 
     <!-- Kiyomizu-dera Temple -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src='images/Kiyomizu-dera-kyoto.jpg' alt='Kiyomizu-dera Temple' class='w-full h-full object-cover'>
       </div>
       <div class="p-4">
@@ -209,7 +217,7 @@
 
     <!-- Shiodome District -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src='images/shio_dome_3.jpg' alt='Shiodome District' class='w-full h-full object-cover'>
       </div>
       <div class="p-4">
@@ -220,7 +228,7 @@
 
     <!-- Wagyu Beef Experience -->
     <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-300">
-      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden">
+      <div class="h-48 bg-gray-300 rounded-t-lg overflow-hidden zoom-container">
         <img src='images/wagyu-beef.jpg' alt='Wagyu Beef' class='w-full h-full object-cover'>
       </div>
       <div class="p-4">
